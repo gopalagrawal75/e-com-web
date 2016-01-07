@@ -18,7 +18,7 @@ def test(request):
         }
     return JsonResponse({
         "result": True,
-        "Message": "Welcome to the Jaime API",
+        "Message": "Welcome to the E-commerce App API",
         "extra": extra
     })
 
@@ -31,7 +31,8 @@ urlpatterns = [
     url(r'^add_review',  add_review.add_review),
     url(r'^gmap',  gmap.gmap),
     url(r'^location',  search_location.search_query),
-    url(r'^insert',  insert.insert_query)
+    url(r'^insert',  insert.insert_query),
+	url(r'^getLocation',  search_location.getLocation)
 
 ]
 

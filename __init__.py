@@ -13,13 +13,13 @@ file = os.path.join(
     'db_creds.json'
 )
 with open(file, 'r') as cfile:
-    creds = json.load(cfile)['jaime']
+    creds = json.load(cfile)['cersei']
 
 dbclient = pymongo.MongoClient("45.55.232.5:27017")
-dbclient.jaime.authenticate(creds['u'], creds['p'], mechanism='MONGODB-CR')
+dbclient.cersei.authenticate(creds['u'], creds['p'], mechanism='MONGODB-CR')
 
 # hello
-db = dbclient.jaime
+db = dbclient.cersei
 
 # ------- Json response format ------------------------------ #
 def get_json(request):
