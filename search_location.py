@@ -10,7 +10,7 @@ failure = dumps({"success": 0})
 def search_query(request):
     data = db.locations
     result = data.find(projection={"_id":False})
-    success = dumps({"success": 1, "data": result, "total": result.count()})
+    success = dumps({"success": 1, "data": result, "totals": result.count()})
     return HttpResponse(success, content_type="application/json")
 
 
