@@ -1,7 +1,7 @@
 from django.conf.urls import url
 from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
-from . import search,search_location,insert,gmap,datascrap,description,all_reviews,add_review
+from . import search_location
 import json
 
 @csrf_exempt
@@ -24,17 +24,6 @@ def test(request):
 
 urlpatterns = [
     url(r'^$', test),
-    url(r'^search',  search.search),
-    url(r'^datascrap',  datascrap.datascrap),
-    url(r'^description',  description.description),
-    url(r'^reviews',  all_reviews.all_reviews),
-    url(r'^add_review',  add_review.add_review),
-    url(r'^gmap',  gmap.gmap),
-    url(r'^location',  search_location.search_query),
-    url(r'^insert',  insert.insert_query),
-	url(r'^getLocation',  search_location.getLocation)
+    url(r'^location',  search_location.getLocation)
 
 ]
-
-
-
