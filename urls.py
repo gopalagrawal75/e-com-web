@@ -24,6 +24,7 @@ def test(request):
 
 urlpatterns = [
     url(r'^$', test),
-    url(r'^location',  search_location.getLocation)
+    url(r'^location',  search_location.getLocation),
+	
 
 ]
